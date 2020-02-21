@@ -384,7 +384,16 @@ static TWTRTwitter *sharedTwitter;
     BOOL isWeb = [self.mobileSSO isWebWithSourceApplication:sourceApplication];
 
     if (isSSOBundle) {
-        [self.mobileSSO processRedirectURL:url];
+        if (@available(iOS 13.0, *)) {
+            [self.mobileSSO processRedirectURL:url];
+            return NO;
+        }
+
+        // iOS11と12でフォアグラウンド直後にネットワーク通信すると失敗する不具合があるため遅延実行
+        // https://qiita.com/akasaaa/items/ac95c54f9a574115a3ca
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0f * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.mobileSSO processRedirectURL:url];
+        });
     } else if (isWeb) {
         BOOL isTokenValid = [self.mobileSSO verifyOauthTokenResponsefromURL:url];
         if (isTokenValid) {
