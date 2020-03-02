@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.authors           = "Twitter"
   s.platform          = :ios, "9.0"
   s.source            = { :git => 'https://github.com/d-o-n-u-t-s/mixch-twitter-kit-ios.git',
-                          :branch => 'feature/2172-change-twitterkit-to-fork-repository'
+                          :branch => 'feature/2375-twitterkit-wkwebview'
                           #:tag => "v#{s.version}"
                         }
 
