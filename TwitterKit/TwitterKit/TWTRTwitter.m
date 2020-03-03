@@ -356,6 +356,7 @@ static TWTRTwitter *sharedTwitter;
     [self.webAuthenticationFlow beginAuthenticationFlow:^(UIViewController *controller) {
         __strong typeof(weakViewController) strongViewController = weakViewController;
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+        navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
         [strongViewController presentViewController:navigationController animated:YES completion:nil];
     }
         completion:^(TWTRSession *session, NSError *error) {
