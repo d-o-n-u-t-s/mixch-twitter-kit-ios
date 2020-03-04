@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name              = "TwitterKit"
-  s.version           = "3.4.2"
+  s.version           = "3.4.2.1"
   s.summary           = "Increase user engagement and app growth."
   s.homepage          = "https://github.com/twitter/twitter-kit-ios"
   s.documentation_url = "https://github.com/twitter/twitter-kit-ios/wiki"
@@ -8,8 +8,7 @@ Pod::Spec.new do |s|
   s.authors           = "Twitter"
   s.platform          = :ios, "9.0"
   s.source            = { :git => 'https://github.com/d-o-n-u-t-s/mixch-twitter-kit-ios.git',
-                          :branch => 'feature/2172-change-twitterkit-to-fork-repository'
-                          #:tag => "v#{s.version}"
+                          :tag => "v#{s.version}"
                         }
 
   s.source_files      = [ 'TwitterKit/TwitterKit/{Networking,Persistence,Resources,Social,Supporting Files,TwitterShareExtensionUI}/**/*.{h,m}',
