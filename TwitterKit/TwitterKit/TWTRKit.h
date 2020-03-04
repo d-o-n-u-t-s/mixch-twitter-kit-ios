@@ -34,8 +34,10 @@
 #import "TWTRListTimelineDataSource.h"
 #import "TWTRLogInButton.h"
 #import "TWTRMediaEntitySize.h"
+#ifndef COCOAPODS
 #import "TWTRMoPubAdConfiguration.h"
 #import "TWTRMoPubNativeAdContainerView.h"
+#endif
 #import "TWTRNotificationConstants.h"
 #import "TWTROAuthSigning.h"
 #import "TWTRSearchTimelineDataSource.h"
@@ -44,7 +46,9 @@
 #import "TWTRTimelineDelegate.h"
 #import "TWTRTimelineFilter.h"
 #import "TWTRTimelineType.h"
+#ifndef COCOAPODS
 #import "TWTRTimelineViewController.h"
+#endif
 #import "TWTRTweet.h"
 #import "TWTRTweetCashtagEntity.h"
 #import "TWTRTweetEntity.h"
