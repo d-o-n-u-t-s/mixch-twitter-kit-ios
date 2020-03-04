@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.authors           = "Twitter"
   s.platforms         = { :ios => "9.0", :tvos => "9.0" }
   s.source            = { :git => 'https://github.com/d-o-n-u-t-s/mixch-twitter-kit-ios.git',
-                          :tag => "v#{s.version}"
+                          :tag => "v3.4.2.1"
                         }
   s.source_files      = [ 'TwitterCore/TwitterCore/**/*.{h,m}',
                           'TwitterCore/TwitterCore-dynamic/TwitterCore.h',
