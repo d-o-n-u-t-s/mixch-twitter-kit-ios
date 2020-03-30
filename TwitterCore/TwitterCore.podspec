@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name              = "TwitterCore"
-  s.version           = "3.2.0"
+  s.version           = "3.2.0.1"
   s.summary           = "Increase user engagement and app growth."
   s.homepage          = "https://github.com/twitter/twitter-kit-ios"
   s.documentation_url = "https://github.com/twitter/twitter-kit-ios/wiki"
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.authors           = "Twitter"
   s.platforms         = { :ios => "9.0", :tvos => "9.0" }
   s.source            = { :git => 'https://github.com/d-o-n-u-t-s/mixch-twitter-kit-ios.git',
-                          :branch => "feature/2375-twitterkit-wkwebview"
+                          :tag => "v3.4.2.1"
                         }
   s.source_files      = [ 'TwitterCore/TwitterCore/**/*.{h,m}',
                           'TwitterCore/TwitterCore-dynamic/TwitterCore.h',
